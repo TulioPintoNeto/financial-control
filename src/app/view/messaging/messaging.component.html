@@ -1,0 +1,11 @@
+@for (toast of toasts; track toast) {
+<ngb-toast
+  [ngClass]="{
+      'text-light': true,
+      'bg-success': toast.type === 'success',
+      'bg-danger': toast.type === 'error',
+    }"
+>
+  {{ toast.body }}
+</ngb-toast>
+}
