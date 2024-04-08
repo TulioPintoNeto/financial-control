@@ -1,0 +1,37 @@
+<div *ngIf="isAuthenticated">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="container collapse navbar-collapse justify-content-end"
+      id="navbarSupportedContent"
+    >
+      <div class="d-flex align-items-center gap-3 my-2 my-lg-0">
+        <span>{{ name }}</span>
+        <img
+          class="rounded-circle"
+          [src]="user?.image"
+          height="38"
+          width="38"
+        />
+        <button
+          (click)="logout()"
+          class="btn btn-outline-secondary my-2 my-sm-0"
+          type="button"
+        >
+          Logout
+        </button>
+      </div>
+    </div>
+  </nav>
+</div>
