@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider } from 'firebase/auth';
-import { environment } from '../../environment';
+import { environment } from '../../environments/environment';
 
 const initialization = () => {
   const app = initializeApp(environment.firebaseConfig);
