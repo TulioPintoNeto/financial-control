@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "emulators:start": "firebase emulators:start"
+    "emulators:start": "firebase emulators:start",
+    "functions": "netlify functions:serve"
   },
   "private": true,
   "dependencies": {
