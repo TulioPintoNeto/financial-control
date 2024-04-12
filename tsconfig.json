@@ -17,6 +17,11 @@
     "noImplicitReturns": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
+    "paths": {
+      "env": [
+        "../environments/environment"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "skipLibCheck": true,
     "sourceMap": true,
