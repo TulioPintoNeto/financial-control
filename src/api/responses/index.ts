@@ -8,6 +8,7 @@ abstract class FunctionsResponse {
   get(): HandlerResponse {
     return {
       body: JSON.stringify(this.body),
+      headers: { 'Content-Type': 'application/json' },
       statusCode: this.statusCode,
     };
   }

@@ -36,6 +36,7 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+/examples
 
 # System files
 .DS_Store
@@ -47,3 +48,6 @@ ui-debug.log
   
 # Local Netlify folder
 .netlify
+
+# Cypress
+cypress.env.json

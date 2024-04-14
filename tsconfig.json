@@ -24,7 +24,7 @@
     },
     "outDir": "./dist/out-tsc",
     "skipLibCheck": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "strict": true,
     "target": "ES2022",
     "useDefineForClassFields": false,
