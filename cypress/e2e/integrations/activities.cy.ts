@@ -11,7 +11,7 @@ context('GET /activities', () => {
         },
       }).then((response) => {
         expect(response.status).to.eq(200);
-        expect(response.body).to.have.length(159);
+        expect(response.body).to.have.length(124);
 
         const firstElement = response.body[0];
 
@@ -46,7 +46,6 @@ context('GET /activities', () => {
         failOnStatusCode: false,
       }).then((response) => {
         expect(response.status).to.eq(400);
-        console.log(response);
         expect(response.body).to.have.property(
           'message',
           'Missing the following query param: date'
@@ -66,7 +65,6 @@ context('GET /activities', () => {
         failOnStatusCode: false,
       }).then((response) => {
         expect(response.status).to.eq(400);
-        console.log(response);
         expect(response.body).to.have.property(
           'message',
           'Invalid format for the query param: date'

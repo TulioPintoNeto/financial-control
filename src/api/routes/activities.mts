@@ -1,12 +1,10 @@
 import type { Config, Handler } from "@netlify/functions";
-import { withAuth } from "../data/auth/withAuth";
 import { ErrorResponse } from "../responses";
-import { parseQuery } from "../data/getAcitivites/parseQuery";
-import { getActivities } from "../data/getAcitivites";
+import { activities, authProvider } from "../factories/data";
 
-export const handler: Handler = withAuth(async (event) => {
+export const handler: Handler = authProvider.protect(async (event) => {
   try {
-    const response = await getActivities(parseQuery(event));
+    const response = await activities.get(event);
     return response.get();
   } catch (e) {
     console.error(e);

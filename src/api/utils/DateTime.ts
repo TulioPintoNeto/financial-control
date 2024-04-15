@@ -15,13 +15,17 @@ export class DateTime {
     return date.isoDate.getMonth() === this.isoDate.getMonth();
   }
 
+  copy() {
+    return new Date(this.isoDate);
+  }
+
   get firstDayOfMonth(): string {
-    return new Date(this.isoDate.setDate(1)).toISOString();
+    return new Date(this.copy().setDate(1)).toISOString();
   }
 
   get lastDayOfMonth(): string {
     const oneMonthAhead = new Date(
-      this.isoDate.setMonth(this.isoDate.getMonth() + 1)
+      this.copy().setMonth(this.isoDate.getMonth() + 1)
     );
     return new Date(oneMonthAhead.setDate(0)).toISOString();
   }
