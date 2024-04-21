@@ -5,5 +5,5 @@ export const hello: Handler = async () => {
 };
 
 export const config: Config = {
-  path: "/api/activities",
+  path: "/api/hello",
 };
